@@ -1,0 +1,52 @@
+---
+const gallery = [
+  {
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCl7CMGrqvR6pg7yq52qdgI0QctCJk-Qu4aQR7l6J6AdM829sPvt4CCsYByvufDpkZaI3A0GT27oo7ZURYk0sziwSTT4F7Tu3_PiGVfUjdaXT2w3u6Vh1pI7wfK9tFVEOtXRq7z7NU0D4dwFyhpvz_W0iiMcn_IBJwEO_sI6KfMj27Gwg1HpDs-dk5F9SqV2tknvjmPEDEDo4iXMM_A3BZm74EtgUowlzemPtZlK2CHchE1oXqxjHe2_gtE-a5VA45G4ocOfqLHR1U",
+    alt: "Tertemiz beyaz mermer üzerine düşen altın rengi cilt bakım serumunun makro çekimi.",
+    span: "col-span-2 row-span-2",
+  },
+  {
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuASyAlB6Ao-4g-jMirToFUNoik4zCUQ3hEbSm33MkXMHft9Vh3CwTy4HfXr_QXa3NTHXx8d386fJGTEE9ZvmhSgrBczHNUivnPfS7U32btILV87a57bvT_CQx1Xg0QUqiC7q8Q5CBdWZOxHafQYnjOgXIZv3_FxhxKTVxYUqGVsl1I4mpMikcz8YIQkKvXjflPR3BYcQJq_LVVaatQofZPjgnkhTTkUDuLwGB25ECg3xKle4r9livalqg0vilqlCzEmgCDZ7tPm4Vc",
+    alt: "Koyu ahşap ve altın aksanlı bir masa üzerinde katlanmış beyaz havlunun sakin detay çekimi.",
+    span: "",
+  },
+  {
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCJE4YndA_XorI1kSgCk1vAgAs50u3EDGcP42aVO_RPw7-uDMJfBOBNCIVh3tRaC35iDyQfEh_WmNR6--RoLOOuh8E5vzI1-qSRudK2gYYawH3dF--SCRk_fQjaZzCbJrE6QIjrZl1U0R-w1pKGeq9PJm6gWf-DbLil29tlyZhg-pYhDVPqVQX1hjaAPI_bTR3_WkSKmDCogNtpr5GrDEulHweWpDpOcoOI1qqRYtSOY_PhcZ_7-VfsOcU8FJg58p-6fKb55x7mc8A",
+    alt: "Üst düzey bir spada koyu nehir taşları olan sakin bir su öğesinin yakın çekimi.",
+    span: "",
+  },
+  {
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDWVrp_f4R1P_pWY4f8djq3avJpniFVokVc7Yhb5FFk4frCPRcC4wRg0QgRWOwRkjT50RBeJzpuMGuf8VXdVr9EVE35wwUMlzvphCv7AO-jN-_RBa8blBYEMthfxj9RpR-5sKElvfs03vONFJvj0OJjbk0spMnjbQXzmNZ82SzYWho1PYuK4DB3jqnMfoms8QOpGjSmHD2bz2NFTE1AMiVb-cTc-FRJrsofGlQU2_f483fBcNq7CraVygju9iTVexFX2M4W2eyR61U",
+    alt: "Sidre Beauty Center'ın devasa koyu taş resepsiyon masası olan geniş resepsiyon alanı.",
+    span: "col-span-2",
+  },
+];
+---
+
+<section class="py-section-padding-desktop bg-surface-bright" id="gallery">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="text-center mb-16 reveal">
+      <h2 class="text-headline-lg font-headline-lg text-primary-container mb-4">
+        Sidre Estetiği
+      </h2>
+      <div class="w-16 h-px bg-secondary mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4 h-[600px]">
+      {
+        gallery.map((item) => (
+          <div class={`rounded-lg overflow-hidden relative group reveal ${item.span}`}>
+            <img
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src={item.image}
+              alt={item.alt}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

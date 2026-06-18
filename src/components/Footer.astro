@@ -1,0 +1,46 @@
+---
+const year = new Date().getFullYear();
+
+const policyLinks = [
+  "Gizlilik Politikası",
+  "Kullanım Koşulları",
+  "Randevu Politikası",
+];
+---
+
+<footer
+  class="bg-primary-container dark:bg-tertiary-container w-full border-t border-secondary/20"
+>
+  <div
+    class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-container-max mx-auto px-gutter py-section-padding-desktop reveal"
+  >
+    <div class="flex flex-col justify-center items-start space-y-4">
+      <span class="text-headline-md font-headline-md text-secondary-fixed"
+        >Sidre Beauty Center</span
+      >
+      <p class="text-body-md font-body-md text-on-primary-container/70 max-w-xs">
+        Zarif bir sığınakta özel, holistik bakımlar aracılığıyla güzelliği ve
+        esenliği yüceltiyoruz.
+      </p>
+    </div>
+    <div class="flex flex-col space-y-4 justify-center md:items-center">
+      <div class="flex flex-col space-y-2 text-label-caps font-label-caps">
+        {
+          policyLinks.map((link) => (
+            <a
+              class="text-on-primary-container/70 hover:text-secondary-fixed transition-colors duration-300 cursor-pointer"
+              href="#"
+            >
+              {link}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <div
+      class="flex flex-col justify-center items-start md:items-end space-y-2 text-body-md font-body-md text-on-primary-container/70"
+    >
+      <span>© {year} Sidre Beauty Center. Tüm hakları saklıdır.</span>
+    </div>
+  </div>
+</footer>

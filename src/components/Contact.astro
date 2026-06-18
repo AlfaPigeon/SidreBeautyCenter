@@ -1,0 +1,128 @@
+---
+const mapImage =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCD25nGkm9HwsKV0T6Ly7U82wFq1bKdnnwnGD-CjtGqlSrCFtGjVVT_lYyybuqFtWA-8nQp2dOv3AcNxwJtgNDzxnmSHvcfV9lItaDKmJ9EWh_vDgtbEchAMSyQfylubZXBYLdJIQgP0e4lAc7m_33rRRpa7rlJL07m83RLARBnrMmH_-FRNj_Yhl4tZKTq37YuECccu7D5Z0CLFhvRmvIxHNBYNT15nQ-AjfV0JAauO-1Qza_DWcOeV6H6GCKbw4_iSQdTe0GFrGM";
+---
+
+<section class="py-section-padding-desktop bg-surface" id="contact">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+      <!-- Contact Info & Map -->
+      <div class="flex flex-col h-full reveal">
+        <h2 class="text-headline-lg font-headline-lg text-primary-container mb-6">
+          Yolculuğunuza Başlayın
+        </h2>
+        <p class="text-body-md font-body-md text-on-surface-variant mb-10">
+          Konsiyerjlerimiz, size en uygun bakım protokolünü tasarlamanızda
+          yardımcı olmak için hazır. Sakinlik vaktinizi ayırtmak için bizimle
+          iletişime geçin.
+        </p>
+        <div class="space-y-6 mb-10">
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-secondary mt-1" data-icon="location_on"
+              >location_on</span
+            >
+            <div>
+              <p class="text-label-caps font-label-caps text-primary-container mb-1">
+                Konum
+              </p>
+              <p class="text-body-md font-body-md text-on-surface-variant">
+                124 Avenue des Champs-Élysées<br />75008 Paris, Fransa
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-secondary mt-1" data-icon="call"
+              >call</span
+            >
+            <div>
+              <p class="text-label-caps font-label-caps text-primary-container mb-1">
+                Telefon
+              </p>
+              <p class="text-body-md font-body-md text-on-surface-variant">
+                +33 1 40 70 22 22
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex-grow rounded-lg overflow-hidden border border-secondary-fixed-dim/20 min-h-[250px] relative"
+        >
+          <img
+            class="absolute inset-0 w-full h-full object-cover"
+            src={mapImage}
+            alt="Güzellik merkezinin Paris, Fransa'daki premium konumunu gösteren şık, minimalist bir harita."
+          />
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div
+        class="bg-surface-container-lowest p-10 rounded-lg border border-secondary-fixed-dim/30 shadow-sm reveal reveal-delay-1"
+      >
+        <form class="space-y-8">
+          <div class="relative">
+            <input
+              class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container placeholder-transparent pt-4 pb-2 transition-colors"
+              id="name"
+              placeholder="Name"
+              required
+              type="text"
+            />
+            <label
+              class="absolute left-0 top-0 text-label-caps font-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:font-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-secondary"
+              for="name">Ad Soyad</label
+            >
+          </div>
+          <div class="relative">
+            <input
+              class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container placeholder-transparent pt-4 pb-2 transition-colors"
+              id="email"
+              placeholder="Email"
+              required
+              type="email"
+            />
+            <label
+              class="absolute left-0 top-0 text-label-caps font-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:font-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-secondary"
+              for="email">E-posta Adresi</label
+            >
+          </div>
+          <div class="relative">
+            <select
+              class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container pt-4 pb-2 appearance-none cursor-pointer"
+              id="interest"
+            >
+              <option class="text-outline" disabled selected value=""
+                >İlgi Alanınızı Seçin</option
+              >
+              <option value="facial">Yüz Bakımı Sanatı</option>
+              <option value="massage">Holistik Masaj</option>
+              <option value="bridal">Gelin Zarafeti</option>
+              <option value="other">Genel Soru</option>
+            </select>
+            <span
+              class="material-symbols-outlined absolute right-0 top-4 text-outline pointer-events-none"
+              data-icon="expand_more">expand_more</span
+            >
+          </div>
+          <div class="relative">
+            <textarea
+              class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container placeholder-transparent pt-4 pb-2 transition-colors resize-none"
+              id="message"
+              placeholder="Message"
+              rows="4"></textarea>
+            <label
+              class="absolute left-0 top-0 text-label-caps font-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:font-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-secondary"
+              for="message">Mesajınız</label
+            >
+          </div>
+          <button
+            class="w-full bg-primary-container text-secondary-fixed text-label-caps font-label-caps py-4 rounded-lg hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95 mt-4"
+            type="submit"
+          >
+            Gönder
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

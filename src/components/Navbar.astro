@@ -1,0 +1,109 @@
+---
+const logo =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCHxsmsChCCESYK4DVl9Zn3D-2c5HMJ0Ghu-i3XpjzqtmlIbZqDskbd3Q6D3fUB9RVaJ0DQh9nHtdmx9JgVuvkBUQgpBg7enRSGpuCkL8DOstKFcr6hayHhemVV3PnCKdIRyLa4R6lXXMp3fL8qXfWSUn_zud83vc1hDDyUQSHiiE-oM0uiayq_QpV7RzLWsWJA_EwQsKHpVPagfzKF4YE1VOweeOIV6eYzi7Tclv0RT7DM7BJeTg1joDyIN4kQYUwKFAGUzupH_Gg";
+
+const links = [
+  { label: "Hizmetler", href: "#services" },
+  { label: "Hakkımızda", href: "#about" },
+  { label: "Galeri", href: "#gallery" },
+  { label: "İletişim", href: "#contact" },
+];
+---
+
+<nav
+  class="bg-surface/80 backdrop-blur-md dark:bg-surface-container/80 fixed top-0 w-full z-50 border-b border-secondary/10 shadow-sm dark:shadow-none"
+>
+  <div
+    class="flex justify-between items-center max-w-container-max mx-auto px-gutter py-4"
+  >
+    <a
+      href="#"
+      class="flex items-center gap-4 cursor-pointer transition-transform duration-200 active:scale-95"
+    >
+      <img
+        alt="Sidre Beauty Center Logo"
+        class="h-12 w-12 object-contain rounded-full"
+        src={logo}
+      />
+      <span
+        class="text-headline-md font-headline-md text-primary dark:text-on-primary-fixed"
+        >Sidre Beauty Center</span
+      >
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+      {
+        links.map((link) => (
+          <a
+            class="text-label-caps font-label-caps text-on-surface-variant hover:text-secondary transition-colors cursor-pointer hover:opacity-80 duration-300"
+            href={link.href}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <button
+      class="hidden md:inline-block bg-primary-container text-secondary-fixed text-label-caps font-label-caps px-6 py-3 rounded-lg hover:opacity-90 transition-all hover:scale-105 active:scale-95"
+    >
+      Randevu Al
+    </button>
+
+    <button
+      id="mobile-menu-toggle"
+      class="md:hidden text-primary"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="material-symbols-outlined" data-icon="menu">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden border-t border-secondary/10 bg-surface/95 backdrop-blur-md"
+  >
+    <div class="flex flex-col px-gutter py-4 gap-4">
+      {
+        links.map((link) => (
+          <a
+            class="text-label-caps font-label-caps text-on-surface-variant hover:text-secondary transition-colors py-2"
+            href={link.href}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+      <button
+        class="bg-primary-container text-secondary-fixed text-label-caps font-label-caps px-6 py-3 rounded-lg hover:opacity-90 transition-opacity mt-2"
+      >
+        Randevu Al
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById("mobile-menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = menu?.classList.toggle("hidden") === false;
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    const icon = toggle.querySelector(".material-symbols-outlined");
+    if (icon) icon.textContent = isOpen ? "close" : "menu";
+  });
+
+  // Close the menu after selecting a link
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.add("hidden");
+      toggle?.setAttribute("aria-expanded", "false");
+      const icon = toggle?.querySelector(".material-symbols-outlined");
+      if (icon) icon.textContent = "menu";
+    });
+  });
+</script>

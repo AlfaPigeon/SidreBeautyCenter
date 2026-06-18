@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sidre Beauty Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#261900",
+                        "on-primary-fixed": "#0d1b33",
+                        "surface-container-low": "#f3f3f4",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-surface": "#1a1c1c",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-container": "#7684a1",
+                        "tertiary-container": "#1f1c0b",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#515f7a",
+                        "on-error": "#ffffff",
+                        "primary": "#000000",
+                        "background": "#f9f9f9",
+                        "on-tertiary-container": "#8a846d",
+                        "on-tertiary-fixed-variant": "#4c4733",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-fixed-variant": "#394761",
+                        "outline-variant": "#c5c6ce",
+                        "secondary": "#775a19",
+                        "secondary-fixed": "#ffdea5",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#785a1a",
+                        "on-background": "#1a1c1c",
+                        "primary-container": "#0d1b33",
+                        "surface": "#f9f9f9",
+                        "primary-fixed": "#d7e2ff",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "inverse-primary": "#b9c7e6",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#cec6ad",
+                        "on-surface-variant": "#44474d",
+                        "tertiary": "#000000",
+                        "outline": "#75777e",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "primary-fixed-dim": "#b9c7e6",
+                        "on-tertiary-fixed": "#1f1c0b",
+                        "secondary-container": "#fed488",
+                        "tertiary-fixed": "#ebe2c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-padding-desktop": "120px",
+                        "unit": "8px",
+                        "container-max": "1200px",
+                        "section-padding-mobile": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-caps": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-glow-shadow:hover {
+            box-shadow: 0 20px 40px rgba(13, 27, 51, 0.08); /* Primary blue tinted ambient shadow */
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-md dark:bg-surface-container/80 fixed top-0 w-full z-50 border-b border-secondary/10 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter py-4">
+<div class="flex items-center gap-4 cursor-pointer transition-transform duration-200 active:scale-95">
+<img alt="Sidre Beauty Center Logo" class="h-12 w-12 object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHxsmsChCCESYK4DVl9Zn3D-2c5HMJ0Ghu-i3XpjzqtmlIbZqDskbd3Q6D3fUB9RVaJ0DQh9nHtdmx9JgVuvkBUQgpBg7enRSGpuCkL8DOstKFcr6hayHhemVV3PnCKdIRyLa4R6lXXMp3fL8qXfWSUn_zud83vc1hDDyUQSHiiE-oM0uiayq_QpV7RzLWsWJA_EwQsKHpVPagfzKF4YE1VOweeOIV6eYzi7Tclv0RT7DM7BJeTg1joDyIN4kQYUwKFAGUzupH_Gg"/>
+<span class="text-headline-md font-headline-md text-primary dark:text-on-primary-fixed">Sidre Beauty Center</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-secondary transition-colors cursor-pointer hover:opacity-80 duration-300" href="#services">Services</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-secondary transition-colors cursor-pointer hover:opacity-80 duration-300" href="#about">About</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-secondary transition-colors cursor-pointer hover:opacity-80 duration-300" href="#gallery">Gallery</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-secondary transition-colors cursor-pointer hover:opacity-80 duration-300" href="#contact">Contact</a>
+</div>
+<button class="hidden md:inline-block bg-primary-container text-secondary-fixed text-label-caps font-label-caps px-6 py-3 rounded-lg hover:opacity-90 transition-opacity">
+                Book Appointment
+            </button>
+<button class="md:hidden text-primary block">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 px-margin-mobile">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full" data-alt="A serene, high-end luxury spa environment featuring a calming deep midnight blue aesthetic with warm golden lighting accents. The scene is incredibly minimalist, focusing on premium textures like polished dark stone and soft white linens. The lighting is diffused and ambient, creating a sanctuary-like atmosphere of exclusivity and tranquility. Highly detailed, photorealistic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbNMyVT7CJpXx50UEICSSPt0KtO8oDGtTb_gO6pWuJdw1CIeRlC_-0axwYoT_I4hA5rdrsa95jd6626JYmz_B6SH2NU6lKY78ctrrLUr4h83SWXAqYmqla_GVa00T9Hf8GPX7Ni3J1du5b0SAstxLf3Vrw_jjpThFY8G0g5tK1XObU_StwmOaCVr99MxYm4gBvxjrkimwGWIxgmsqKYLu9ZTgS-zltT_TCL3ynK_F-LxEY_sa9_rJaCAfUnOdyWsba5PYgp1oxtsk')"></div>
+<div class="absolute inset-0 bg-primary-container/85"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-gutter text-center md:text-left flex flex-col md:flex-row items-center w-full">
+<div class="md:w-2/3">
+<h1 class="text-headline-xl font-headline-xl text-secondary-fixed mb-6 text-headline-lg-mobile">Reclaim Your Radiance</h1>
+<p class="text-body-lg font-body-lg text-secondary-fixed-dim max-w-2xl mb-10 md:mb-12">Experience the pinnacle of beauty and wellness in a sanctuary of serenity. Our bespoke treatments are designed to elevate your natural glow and restore profound inner peace.</p>
+<button class="bg-secondary-fixed text-primary-container text-label-caps font-label-caps px-8 py-4 rounded-lg hover:bg-secondary-fixed-dim transition-colors inline-flex items-center gap-2">
+                        Book Your Experience
+                        <span class="material-symbols-outlined text-[18px]" data-icon="arrow_right_alt">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-padding-desktop bg-surface-bright py-section-padding-mobile" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg font-headline-lg text-primary-container mb-4">Curated Treatments</h2>
+<div class="w-16 h-px bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-surface-container-lowest border border-secondary-fixed-dim/30 rounded-lg p-8 transition-all duration-300 soft-glow-shadow group cursor-pointer">
+<div class="h-48 mb-6 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close up, soft focus image of a premium facial treatment in progress. The lighting is bright and airy, highlighting pristine white towels and a minimalist aesthetic. A subtle hint of warm gold is present in the background elements, emphasizing the high-end, exclusive nature of the skincare artistry. Photorealistic, shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDL3ebpwm2Ac9fqsh3u0zKYRFO84_75gb9nW6pUunU_FANh9JHeRUZhsc-N3fpNOfUFqE4r3RegRZYM2z-dGckmKef5bqFrViq_rrzGI0I3UeQ3JcvWqTlJ6qBSuTfqI5D2fLliuUXMWL0-FZEAW88lh_rvWiemZF6jSbT5mWN2285pdhWNDrjTlvU6psn3iGy5PKORR28ZL-Txl57t5HwH30tUfNv2WuBQta-hUc5UzKLj3Dy1M-KWqhgEwUeYFKG9g4xqI-c294"/>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary-container mb-3">Facial Artistry</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-3">Bespoke skincare protocols utilizing scientifically advanced formulas to sculpt, lift, and impart an unparalleled luminous finish to your complexion.</p>
+<a class="inline-flex items-center gap-2 text-label-caps font-label-caps text-secondary hover:text-secondary-fixed-variant transition-colors" href="#">
+                            Learn More <span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface-container-lowest border border-secondary-fixed-dim/30 rounded-lg p-8 transition-all duration-300 soft-glow-shadow group cursor-pointer">
+<div class="h-48 mb-6 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene, minimalist setting showing elements of a holistic massage. A polished, dark stone surface holds amber-colored essential oil bottles and smooth, dark massage stones. The lighting is exceptionally soft and moody, casting long, elegant shadows and reflecting off subtle gold accents in the room. Conveys deep relaxation and tactile luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-rhhzVo27d4bciKLfiPkYYLlE97HT-sM176lSjz72WBR2PiNPNsmRliWz8hgSCCbDw-lvw_AMP5_s-BqlTQn08ObUGi763K5ffYVmsNdtn6K3LIMIHC2PhcQOLGYQNWSTcnojUtaWbWkcTsg7p_hX2qU87xDtfTvv4jWkVFhpDhC-vUOrNYK4p4NdR1UjDpFv9UTg_-kHhewXxUtzOdIaSMAfrkUbsRaHJdVqo6L5T3Iy70XFn8cYovPWenWmw9uAXXf5WaABTzk"/>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary-container mb-3">Holistic Massage</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-3">A transcendent journey of muscular release and energetic balancing, merging ancient techniques with intuitive touch to restore complete harmony.</p>
+<a class="inline-flex items-center gap-2 text-label-caps font-label-caps text-secondary hover:text-secondary-fixed-variant transition-colors" href="#">
+                            Learn More <span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface-container-lowest border border-secondary-fixed-dim/30 rounded-lg p-8 transition-all duration-300 soft-glow-shadow group cursor-pointer">
+<div class="h-48 mb-6 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An elegant, soft-focus portrait of a bride receiving pre-wedding beauty preparations. The color palette is ethereal, featuring soft creams, pure whites, and delicate hints of gold jewelry. The atmosphere is calm, refined, and distinctly high-end, capturing the pinnacle of bridal elegance and sophisticated styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOLLU_Walcf_y7wuhNkiuRGEHFxE6oja70IFFMcMRHC-v9ioZZwGQGpfZV6RxaCcrufpwDy5iBe0NxKchHbnr__k-G9bUozvnhOoPm_9g-xWndYUoJq82W5XQy5e36qApXCrGcDOZ-sesiIHU-R6Rz7t_otIqB7ZBTq1ovoPLpL8InjTHRk0XAIH10CrKUS0i1iZuoE-AtJGE2zyNa7AcImQ2gk8CFls2yN9QHi_CR1WHU4yJXrRDuSapnr2JpUMJY2PcH0_EepTw"/>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary-container mb-3">Bridal Elegance</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-3">Comprehensive beauty curation for your most significant day. From preliminary radiance therapies to flawless day-of artistry, ensuring timeless perfection.</p>
+<a class="inline-flex items-center gap-2 text-label-caps font-label-caps text-secondary hover:text-secondary-fixed-variant transition-colors" href="#">
+                            Learn More <span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-padding-desktop bg-surface py-section-padding-mobile" id="about">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative h-[600px] rounded-lg overflow-hidden border border-secondary-fixed-dim/20 h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A wide, architectural shot of the interior of a luxury beauty center. The space is vast and uncluttered, adhering to a minimalist design philosophy. The walls are a deep, rich midnight blue, contrasted by minimalist white furniture with tactile, high-quality fabrics. Subtle, thin gold architectural lines provide visual interest and a sense of exclusivity. The lighting is dramatic yet calm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhftqUdyUZbiOqcmkt80Mr-o0_6uhkdv0aGZX7U1kCjuvu3-YyZ4Ge4MM4So6nnz2bnayh8Wtp8pvzunz64RnbhNWlKBtdxPk640iZnhD4Yvl4Tzh3O1G5132bNleSWex1UjloOSa2SMfg4f3TdlNnBXRcUI09wfrHrdf3Yg1ghPUHxJtG6AP93l_Z7K4-u5VMSbCjfOXhJRmWAkLuphFMaXfM_xpEU_Nx3-uGFQ_pajMKJ5vwe2B0tsRwFhb-1DiZDhBmyUoKOEI"/>
+</div>
+<div>
+<h2 class="text-headline-lg font-headline-lg text-primary-container mb-6">A Sanctuary of Excellence</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-6">At Sidre Beauty Center, we believe that true beauty is cultivated through a delicate balance of sophisticated science and profound relaxation.</p>
+<p class="text-body-md font-body-md text-on-surface-variant mb-10">Our environment is purposefully designed as an escape from the relentless pace of modern life. Every treatment is a masterclass in precision, utilizing only the most premium, ethically sourced formulations and techniques executed by industry-leading artisans. We do not just offer services; we curate transformative experiences tailored entirely to your unique essence.</p>
+<div class="flex flex-col sm:flex-row gap-6">
+<div class="border-l-2 border-secondary pl-4">
+<span class="block text-headline-md font-headline-md text-primary-container">15+</span>
+<span class="text-label-caps font-label-caps text-outline">Years of Mastery</span>
+</div>
+<div class="border-l-2 border-secondary pl-4">
+<span class="block text-headline-md font-headline-md text-primary-container">Exotic</span>
+<span class="text-label-caps font-label-caps text-outline">Premium Ingredients</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section (Bento Grid) -->
+<section class="py-section-padding-desktop bg-surface-bright py-section-padding-mobile" id="gallery">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg font-headline-lg text-primary-container mb-4">The Aesthetics of Sidre</h2>
+<div class="w-16 h-px bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4 h-[600px] h-auto">
+<div class="col-span-2 row-span-2 rounded-lg overflow-hidden relative group">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A highly detailed, macro shot of luxurious, golden skincare serum being gently dropped onto pristine white marble. The lighting highlights the viscous, premium texture of the liquid against the cold, clean stone. The color palette is strictly white, subtle grey, and brilliant gold, evoking extreme luxury and clinical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl7CMGrqvR6pg7yq52qdgI0QctCJk-Qu4aQR7l6J6AdM829sPvt4CCsYByvufDpkZaI3A0GT27oo7ZURYk0sziwSTT4F7Tu3_PiGVfUjdaXT2w3u6Vh1pI7wfK9tFVEOtXRq7z7NU0D4dwFyhpvz_W0iiMcn_IBJwEO_sI6KfMj27Gwg1HpDs-dk5F9SqV2tknvjmPEDEDo4iXMM_A3BZm74EtgUowlzemPtZlK2CHchE1oXqxjHe2_gtE-a5VA45G4ocOfqLHR1U"/>
+</div>
+<div class="rounded-lg overflow-hidden relative group">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A serene detail shot of a spa treatment room. Focus is on a beautifully folded, thick white towel resting on a dark wood and gold accent table. In the softly blurred background, a warm, ambient light source casts a relaxing glow over a deep blue wall. Minimalist, high-contrast, peaceful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASyAlB6Ao-4g-jMirToFUNoik4zCUQ3hEbSm33MkXMHft9Vh3CwTy4HfXr_QXa3NTHXx8d386fJGTEE9ZvmhSgrBczHNUivnPfS7U32btILV87a57bvT_CQx1Xg0QUqiC7q8Q5CBdWZOxHafQYnjOgXIZv3_FxhxKTVxYUqGVsl1I4mpMikcz8YIQkKvXjflPR3BYcQJq_LVVaatQofZPjgnkhTTkUDuLwGB25ECg3xKle4r9livalqg0vilqlCzEmgCDZ7tPm4Vc"/>
+</div>
+<div class="rounded-lg overflow-hidden relative group">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of a tranquil water feature inside a high-end spa. Dark, smooth river stones rest beneath crystal clear water. The scene is illuminated by soft, moody lighting that emphasizes the deep blue and slate tones of the environment. Conveys stillness and premium wellness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJE4YndA_XorI1kSgCk1vAgAs50u3EDGcP42aVO_RPw7-uDMJfBOBNCIVh3tRaC35iDyQfEh_WmNR6--RoLOOuh8E5vzI1-qSRudK2gYYawH3dF--SCRk_fQjaZzCbJrE6QIjrZl1U0R-w1pKGeq9PJm6gWf-DbLil29tlyZhg-pYhDVPqVQX1hjaAPI_bTR3_WkSKmDCogNtpr5GrDEulHweWpDpOcoOI1qqRYtSOY_PhcZ_7-VfsOcU8FJg58p-6fKb55x7mc8A"/>
+</div>
+<div class="col-span-2 rounded-lg overflow-hidden relative group">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An expansive view of the Sidre Beauty Center reception area. Minimalist luxury defined by 'wasted' space. A monolithic, dark stone reception desk sits against a vast, pristine white wall. Subtle gold branding is visible. The floor is seamless, polished light resin. The atmosphere is intimidatingly pristine and exclusive." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWVrp_f4R1P_pWY4f8djq3avJpniFVokVc7Yhb5FFk4frCPRcC4wRg0QgRWOwRkjT50RBeJzpuMGuf8VXdVr9EVE35wwUMlzvphCv7AO-jN-_RBa8blBYEMthfxj9RpR-5sKElvfs03vONFJvj0OJjbk0spMnjbQXzmNZ82SzYWho1PYuK4DB3jqnMfoms8QOpGjSmHD2bz2NFTE1AMiVb-cTc-FRJrsofGlQU2_f483fBcNq7CraVygju9iTVexFX2M4W2eyR61U"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding-desktop bg-surface py-section-padding-mobile" id="contact">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<!-- Contact Info & Map -->
+<div class="flex flex-col h-full">
+<h2 class="text-headline-lg font-headline-lg text-primary-container mb-6">Begin Your Journey</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-10">Our concierges are available to assist you in designing your perfect treatment protocol. Connect with us to secure your sanctuary time.</p>
+<div class="space-y-6 mb-10">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="location_on">location_on</span>
+<div>
+<p class="text-label-caps font-label-caps text-primary-container mb-1">Location</p>
+<p class="text-body-md font-body-md text-on-surface-variant">124 Avenue des Champs-Élysées<br/>75008 Paris, France</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="call">call</span>
+<div>
+<p class="text-label-caps font-label-caps text-primary-container mb-1">Telephone</p>
+<p class="text-body-md font-body-md text-on-surface-variant">+33 1 40 70 22 22</p>
+</div>
+</div>
+</div>
+<div class="flex-grow rounded-lg overflow-hidden border border-secondary-fixed-dim/20 min-h-[250px] relative">
+<!-- Map Placeholder -->
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A stylized, minimalist map showing a premium location in Paris, France. The map uses a sophisticated color scheme of deep navy blue for water and parks, soft beige for landmasses, and thin, elegant gold lines for major roads. A subtle gold marker indicates the exact location of the beauty center. High-end aesthetic." data-location="Paris, France" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD25nGkm9HwsKV0T6Ly7U82wFq1bKdnnwnGD-CjtGqlSrCFtGjVVT_lYyybuqFtWA-8nQp2dOv3AcNxwJtgNDzxnmSHvcfV9lItaDKmJ9EWh_vDgtbEchAMSyQfylubZXBYLdJIQgP0e4lAc7m_33rRRpa7rlJL07m83RLARBnrMmH_-FRNj_Yhl4tZKTq37YuECccu7D5Z0CLFhvRmvIxHNBYNT15nQ-AjfV0JAauO-1Qza_DWcOeV6H6GCKbw4_iSQdTe0GFrGM"/>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="bg-surface-container-lowest p-10 rounded-lg border border-secondary-fixed-dim/30 shadow-sm">
+<form class="space-y-8">
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container placeholder-transparent pt-4 pb-2 transition-colors" id="name" placeholder="Name" required="" type="text"/>
+<label class="absolute left-0 top-0 text-label-caps font-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:font-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-secondary" for="name">Full Name</label>
+</div>
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container placeholder-transparent pt-4 pb-2 transition-colors" id="email" placeholder="Email" required="" type="email"/>
+<label class="absolute left-0 top-0 text-label-caps font-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:font-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-secondary" for="email">Email Address</label>
+</div>
+<div class="relative">
+<select class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container pt-4 pb-2 appearance-none cursor-pointer" id="interest">
+<option class="text-outline" disabled="" selected="" value="">Select Area of Interest</option>
+<option value="facial">Facial Artistry</option>
+<option value="massage">Holistic Massage</option>
+<option value="bridal">Bridal Elegance</option>
+<option value="other">General Inquiry</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-4 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+<div class="relative">
+<textarea class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container placeholder-transparent pt-4 pb-2 transition-colors resize-none" id="message" placeholder="Message" rows="4"></textarea>
+<label class="absolute left-0 top-0 text-label-caps font-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:font-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-secondary" for="message">Your Message</label>
+</div>
+<button class="w-full bg-primary-container text-secondary-fixed text-label-caps font-label-caps py-4 rounded-lg hover:opacity-90 transition-opacity mt-4" type="submit">
+                                Submit Inquiry
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-tertiary-container w-full border-t border-secondary/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-container-max mx-auto px-gutter py-section-padding-desktop py-section-padding-mobile">
+<div class="flex flex-col justify-center items-start md:items-start space-y-4">
+<span class="text-headline-md font-headline-md text-secondary-fixed">Sidre Beauty Center</span>
+<p class="text-body-md font-body-md text-on-primary-container/70 max-w-xs">Elevating beauty and wellness through exclusive, holistic treatments in a refined sanctuary.</p>
+</div>
+<div class="flex flex-col space-y-4 justify-center md:items-center">
+<div class="flex flex-col space-y-2 text-label-caps font-label-caps">
+<a class="text-on-primary-container/70 hover:text-secondary-fixed hover:text-secondary-fixed transition-colors duration-300 cursor-pointer" href="#">Privacy Policy</a>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed hover:text-secondary-fixed transition-colors duration-300 cursor-pointer" href="#">Terms of Service</a>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed hover:text-secondary-fixed transition-colors duration-300 cursor-pointer" href="#">Booking Policy</a>
+</div>
+</div>
+<div class="flex flex-col justify-center items-start md:items-end space-y-2 text-body-md font-body-md text-on-primary-container/70">
+<span>© 2024 Sidre Beauty Center. All rights reserved.</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,71 @@
+---
+const services = [
+  {
+    title: "Yüz Bakımı Sanatı",
+    description:
+      "Cildinizi şekillendirmek, sıkılaştırmak ve eşsiz bir ışıltı kazandırmak için bilimsel olarak gelişmiş formüller kullanan kişiye özel cilt bakımı protokolleri.",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDDL3ebpwm2Ac9fqsh3u0zKYRFO84_75gb9nW6pUunU_FANh9JHeRUZhsc-N3fpNOfUFqE4r3RegRZYM2z-dGckmKef5bqFrViq_rrzGI0I3UeQ3JcvWqTlJ6qBSuTfqI5D2fLliuUXMWL0-FZEAW88lh_rvWiemZF6jSbT5mWN2285pdhWNDrjTlvU6psn3iGy5PKORR28ZL-Txl57t5HwH30tUfNv2WuBQta-hUc5UzKLj3Dy1M-KWqhgEwUeYFKG9g4xqI-c294",
+    alt: "Tertemiz beyaz havlular ve minimalist bir estetikle devam eden premium bir yüz bakımının yakın çekimi.",
+  },
+  {
+    title: "Holistik Masaj",
+    description:
+      "Kasları gevşeten ve enerjiyi dengeleyen aşkın bir yolculuk; kadim teknikleri sezgisel dokunuşla birleştirerek tam bir uyumu yeniden kazandırır.",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA-rhhzVo27d4bciKLfiPkYYLlE97HT-sM176lSjz72WBR2PiNPNsmRliWz8hgSCCbDw-lvw_AMP5_s-BqlTQn08ObUGi763K5ffYVmsNdtn6K3LIMIHC2PhcQOLGYQNWSTcnojUtaWbWkcTsg7p_hX2qU87xDtfTvv4jWkVFhpDhC-vUOrNYK4p4NdR1UjDpFv9UTg_-kHhewXxUtzOdIaSMAfrkUbsRaHJdVqo6L5T3Iy70XFn8cYovPWenWmw9uAXXf5WaABTzk",
+    alt: "Amber renkli esans yağı şişeleri ve pürüzsüz koyu masaj taşları gösteren sakin, minimalist bir ortam.",
+  },
+  {
+    title: "Gelin Zarafeti",
+    description:
+      "Hayatınızın en önemli günü için kapsamlı güzellik kürasyonu. Ön ışıltı terapilerinden kusursuz gün içi sanatçılığa, zamansız mükemmelliği garanti eder.",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBOLLU_Walcf_y7wuhNkiuRGEHFxE6oja70IFFMcMRHC-v9ioZZwGQGpfZV6RxaCcrufpwDy5iBe0NxKchHbnr__k-G9bUozvnhOoPm_9g-xWndYUoJq82W5XQy5e36qApXCrGcDOZ-sesiIHU-R6Rz7t_otIqB7ZBTq1ovoPLpL8InjTHRk0XAIH10CrKUS0i1iZuoE-AtJGE2zyNa7AcImQ2gk8CFls2yN9QHi_CR1WHU4yJXrRDuSapnr2JpUMJY2PcH0_EepTw",
+    alt: "Düğün öncesi güzellik hazırlıkları yapılan bir gelinin zarif, yumuşak odaklı portresi.",
+  },
+];
+---
+
+<section class="py-section-padding-desktop bg-surface-bright" id="services">
+  <div class="max-w-container-max mx-auto px-gutter">
+    <div class="text-center mb-16 reveal">
+      <h2 class="text-headline-lg font-headline-lg text-primary-container mb-4">
+        Özenle Seçilmiş Bakımlar
+      </h2>
+      <div class="w-16 h-px bg-secondary mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+      {
+        services.map((service, index) => (
+          <div
+            class={`bg-surface-container-lowest border border-secondary-fixed-dim/30 rounded-lg p-8 soft-glow-shadow group cursor-pointer reveal reveal-delay-${index + 1}`}
+          >
+            <div class="h-48 mb-6 overflow-hidden rounded-lg">
+              <img
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src={service.image}
+                alt={service.alt}
+              />
+            </div>
+            <h3 class="text-headline-md font-headline-md text-primary-container mb-3">
+              {service.title}
+            </h3>
+            <p class="text-body-md font-body-md text-on-surface-variant mb-6 line-clamp-3">
+              {service.description}
+            </p>
+            <a
+              class="inline-flex items-center gap-2 text-label-caps font-label-caps text-secondary hover:text-secondary-fixed-variant transition-colors group/link"
+              href="#contact"
+            >
+              Daha Fazla
+              <span class="material-symbols-outlined text-[16px] transition-transform group-hover/link:translate-x-1" data-icon="chevron_right">
+                chevron_right
+              </span>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

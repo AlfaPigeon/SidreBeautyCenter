@@ -1,0 +1,41 @@
+---
+const heroImage =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuAbNMyVT7CJpXx50UEICSSPt0KtO8oDGtTb_gO6pWuJdw1CIeRlC_-0axwYoT_I4hA5rdrsa95jd6626JYmz_B6SH2NU6lKY78ctrrLUr4h83SWXAqYmqla_GVa00T9Hf8GPX7Ni3J1du5b0SAstxLf3Vrw_jjpThFY8G0g5tK1XObU_StwmOaCVr99MxYm4gBvxjrkimwGWIxgmsqKYLu9ZTgS-zltT_TCL3ynK_F-LxEY_sa9_rJaCAfUnOdyWsba5PYgp1oxtsk";
+---
+
+<section class="relative min-h-screen flex items-center pt-24" id="home">
+  <div class="absolute inset-0 z-0">
+    <div
+      class="bg-cover bg-center w-full h-full"
+      style={`background-image: url('${heroImage}')`}
+    >
+    </div>
+    <div class="absolute inset-0 bg-primary-container/85"></div>
+  </div>
+  <div
+    class="relative z-10 max-w-container-max mx-auto px-gutter text-center md:text-left flex flex-col md:flex-row items-center w-full"
+  >
+    <div class="md:w-2/3">
+      <h1 class="text-headline-xl font-headline-xl text-secondary-fixed mb-6 animate-fade-up">
+        Işıltınızı Yeniden Keşfedin
+      </h1>
+      <p
+        class="text-body-lg font-body-lg text-secondary-fixed-dim max-w-2xl mb-10 md:mb-12 animate-fade-up animate-delay-1"
+      >
+        Huzur dolu bir sığınakta güzellik ve esenliğin zirvesini deneyimleyin.
+        Kişiye özel bakımlarımız, doğal ışıltınızı yükseltmek ve derin bir iç
+        huzuru yeniden kazandırmak için tasarlandı.
+      </p>
+      <a
+        href="#contact"
+        class="bg-secondary-fixed text-primary-container text-label-caps font-label-caps px-8 py-4 rounded-lg hover:bg-secondary-fixed-dim transition-all hover:scale-105 active:scale-95 inline-flex items-center gap-2 animate-fade-up animate-delay-2 group"
+      >
+        Deneyiminizi Planlayın
+        <span
+          class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1"
+          data-icon="arrow_right_alt">arrow_right_alt</span
+        >
+      </a>
+    </div>
+  </div>
+</section>
