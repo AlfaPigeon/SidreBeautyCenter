@@ -1,6 +1,11 @@
 ---
+
 const mapImage =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuCD25nGkm9HwsKV0T6Ly7U82wFq1bKdnnwnGD-CjtGqlSrCFtGjVVT_lYyybuqFtWA-8nQp2dOv3AcNxwJtgNDzxnmSHvcfV9lItaDKmJ9EWh_vDgtbEchAMSyQfylubZXBYLdJIQgP0e4lAc7m_33rRRpa7rlJL07m83RLARBnrMmH_-FRNj_Yhl4tZKTq37YuECccu7D5Z0CLFhvRmvIxHNBYNT15nQ-AjfV0JAauO-1Qza_DWcOeV6H6GCKbw4_iSQdTe0GFrGM";
+
+const address = "Yukarı Bahçelievler Mahallesi Aşkaabat Caddesi 17, Zil Kodu No:6 D:6 2.kat, 06490 Çankaya/Ankara";
+const phone = "+905326577591";
+const whatsappLink = `https://wa.me/${phone.replace(/\D/g, '')}?text=Merhaba,%20Sidre%20Beauty%20Center%20için%20randevu%20almak%20istiyorum.`;
 ---
 
 <section class="py-section-padding-desktop bg-surface" id="contact">
@@ -26,7 +31,7 @@ const mapImage =
                 Konum
               </p>
               <p class="text-body-md font-body-md text-on-surface-variant">
-                124 Avenue des Champs-Élysées<br />75008 Paris, Fransa
+                {address}
               </p>
             </div>
           </div>
@@ -39,90 +44,33 @@ const mapImage =
                 Telefon
               </p>
               <p class="text-body-md font-body-md text-on-surface-variant">
-                +33 1 40 70 22 22
+                {phone}
               </p>
             </div>
           </div>
         </div>
-        <div
-          class="flex-grow rounded-lg overflow-hidden border border-secondary-fixed-dim/20 min-h-[250px] relative"
-        >
-          <img
-            class="absolute inset-0 w-full h-full object-cover"
-            src={mapImage}
-            alt="Güzellik merkezinin Paris, Fransa'daki premium konumunu gösteren şık, minimalist bir harita."
-          />
+        <div class="flex gap-4 mb-10">
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-[#25D366] text-white text-label-caps font-label-caps px-6 py-3 rounded-lg hover:bg-[#20BA5B] transition-all hover:scale-105 active:scale-95 group"
+          >
+              <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    fill="currentColor"
+    class="w-5 h-5"
+  >
+    <path d="M19.11 17.21c-.28-.14-1.65-.81-1.91-.91-.26-.09-.44-.14-.63.14-.19.28-.72.91-.89 1.1-.16.19-.33.21-.61.07-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.39-1.66-1.55-1.94-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.63-1.52-.86-2.08-.23-.55-.46-.47-.63-.48h-.53c-.19 0-.49.07-.75.35-.26.28-.98.96-.98 2.34s1 2.71 1.14 2.9c.14.19 1.97 3.01 4.77 4.22.67.29 1.19.46 1.59.59.67.21 1.28.18 1.76.11.54-.08 1.65-.68 1.88-1.33.23-.65.23-1.21.16-1.33-.07-.12-.26-.19-.53-.33z"/>
+  </svg>
+            WhatsApp'tan Randevu Al
+          </a>
         </div>
+
       </div>
 
-      <!-- Contact Form -->
-      <div
-        class="bg-surface-container-lowest p-10 rounded-lg border border-secondary-fixed-dim/30 shadow-sm reveal reveal-delay-1"
-      >
-        <form class="space-y-8">
-          <div class="relative">
-            <input
-              class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container placeholder-transparent pt-4 pb-2 transition-colors"
-              id="name"
-              placeholder="Name"
-              required
-              type="text"
-            />
-            <label
-              class="absolute left-0 top-0 text-label-caps font-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:font-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-secondary"
-              for="name">Ad Soyad</label
-            >
-          </div>
-          <div class="relative">
-            <input
-              class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container placeholder-transparent pt-4 pb-2 transition-colors"
-              id="email"
-              placeholder="Email"
-              required
-              type="email"
-            />
-            <label
-              class="absolute left-0 top-0 text-label-caps font-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:font-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-secondary"
-              for="email">E-posta Adresi</label
-            >
-          </div>
-          <div class="relative">
-            <select
-              class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container pt-4 pb-2 appearance-none cursor-pointer"
-              id="interest"
-            >
-              <option class="text-outline" disabled selected value=""
-                >İlgi Alanınızı Seçin</option
-              >
-              <option value="facial">Yüz Bakımı Sanatı</option>
-              <option value="massage">Holistik Masaj</option>
-              <option value="bridal">Gelin Zarafeti</option>
-              <option value="other">Genel Soru</option>
-            </select>
-            <span
-              class="material-symbols-outlined absolute right-0 top-4 text-outline pointer-events-none"
-              data-icon="expand_more">expand_more</span
-            >
-          </div>
-          <div class="relative">
-            <textarea
-              class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 text-body-md font-body-md text-primary-container placeholder-transparent pt-4 pb-2 transition-colors resize-none"
-              id="message"
-              placeholder="Message"
-              rows="4"></textarea>
-            <label
-              class="absolute left-0 top-0 text-label-caps font-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:font-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-secondary"
-              for="message">Mesajınız</label
-            >
-          </div>
-          <button
-            class="w-full bg-primary-container text-secondary-fixed text-label-caps font-label-caps py-4 rounded-lg hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95 mt-4"
-            type="submit"
-          >
-            Gönder
-          </button>
-        </form>
-      </div>
+  
     </div>
   </div>
 </section>

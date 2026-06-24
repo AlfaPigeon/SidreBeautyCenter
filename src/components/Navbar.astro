@@ -8,6 +8,9 @@ const links = [
   { label: "Galeri", href: "#gallery" },
   { label: "İletişim", href: "#contact" },
 ];
+
+const whatsappPhone = "905326577591";
+const whatsappLink = `https://wa.me/${whatsappPhone}?text=Merhaba,%20Sidre%20Beauty%20Center%20için%20randevu%20almak%20istiyorum.`;
 ---
 
 <nav
@@ -47,7 +50,9 @@ const links = [
     <button
       class="hidden md:inline-block bg-primary-container text-secondary-fixed text-label-caps font-label-caps px-6 py-3 rounded-lg hover:opacity-90 transition-all hover:scale-105 active:scale-95"
     >
-      Randevu Al
+      <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">
+        Randevu Al
+      </a>
     </button>
 
     <button
@@ -80,7 +85,9 @@ const links = [
       <button
         class="bg-primary-container text-secondary-fixed text-label-caps font-label-caps px-6 py-3 rounded-lg hover:opacity-90 transition-opacity mt-2"
       >
-        Randevu Al
+        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+          Randevu Al
+        </a>
       </button>
     </div>
   </div>

@@ -1,11 +1,5 @@
 ---
 const year = new Date().getFullYear();
-
-const policyLinks = [
-  "Gizlilik Politikası",
-  "Kullanım Koşulları",
-  "Randevu Politikası",
-];
 ---
 
 <footer
@@ -23,20 +17,7 @@ const policyLinks = [
         esenliği yüceltiyoruz.
       </p>
     </div>
-    <div class="flex flex-col space-y-4 justify-center md:items-center">
-      <div class="flex flex-col space-y-2 text-label-caps font-label-caps">
-        {
-          policyLinks.map((link) => (
-            <a
-              class="text-on-primary-container/70 hover:text-secondary-fixed transition-colors duration-300 cursor-pointer"
-              href="#"
-            >
-              {link}
-            </a>
-          ))
-        }
-      </div>
-    </div>
+    <div></div>
     <div
       class="flex flex-col justify-center items-start md:items-end space-y-2 text-body-md font-body-md text-on-primary-container/70"
     >
