@@ -4,10 +4,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  // GitHub Pages project site: https://alfapigeon.github.io/SidreBeautyCenter/
-  site: 'https://alfapigeon.github.io',
-  base: '/SidreBeautyCenter',
-  // Output straight into the folder GitHub Pages serves from.
+  // Custom domain: https://sidrebeauty.com
+  site: 'https://sidrebeauty.com',
+  // No base path needed for a custom domain at root
   outDir: './docs',
   vite: {
     plugins: [tailwindcss()],
